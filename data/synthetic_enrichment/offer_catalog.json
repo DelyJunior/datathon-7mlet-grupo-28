@@ -1,0 +1,46 @@
+{
+  "produto_base": "term_deposit (Bank Marketing)",
+  "braco_referencia": "ARM_EMAIL_SOFT",
+  "arms": [
+    {
+      "arm_id": "ARM_EMAIL_SOFT",
+      "name": "Email — CTA suave",
+      "canal": "email",
+      "cta": "soft",
+      "mult": 0.85,
+      "custo_rel": 0.2
+    },
+    {
+      "arm_id": "ARM_EMAIL_URGENTE",
+      "name": "Email — CTA urgente",
+      "canal": "email",
+      "cta": "urgente",
+      "mult": 1.05,
+      "custo_rel": 0.2
+    },
+    {
+      "arm_id": "ARM_SMS_SOFT",
+      "name": "SMS — CTA suave",
+      "canal": "sms",
+      "cta": "soft",
+      "mult": 1.1,
+      "custo_rel": 0.5
+    },
+    {
+      "arm_id": "ARM_SMS_URGENTE",
+      "name": "SMS — CTA urgente",
+      "canal": "sms",
+      "cta": "urgente",
+      "mult": 1.3,
+      "custo_rel": 0.5
+    },
+    {
+      "arm_id": "ARM_CALL_CONSULTIVO",
+      "name": "Ligação — abordagem consultiva",
+      "canal": "call",
+      "cta": "consultivo",
+      "mult": 1.45,
+      "custo_rel": 1.0
+    }
+  ]
+}
