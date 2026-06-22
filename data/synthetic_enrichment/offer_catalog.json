@@ -1,46 +1,72 @@
-{
-  "produto_base": "term_deposit (Bank Marketing)",
-  "braco_referencia": "ARM_EMAIL_SOFT",
-  "arms": [
-    {
-      "arm_id": "ARM_EMAIL_SOFT",
-      "name": "Email — CTA suave",
-      "canal": "email",
-      "cta": "soft",
-      "mult": 0.85,
-      "custo_rel": 0.2
+[
+  {
+    "offer_id": "OFF_001",
+    "name": "Cartão de crédito sem anuidade",
+    "canal": "app_mobile",
+    "base_rate": 0.1,
+    "boosts": {
+      "job_admin.": 0.06,
+      "job_management": 0.04,
+      "job_student": 0.05,
+      "edu_university": 0.04,
+      "marital_single": 0.03,
+      "no_loan": 0.03
     },
-    {
-      "arm_id": "ARM_EMAIL_URGENTE",
-      "name": "Email — CTA urgente",
-      "canal": "email",
-      "cta": "urgente",
-      "mult": 1.05,
-      "custo_rel": 0.2
+    "reward_val": 1.0
+  },
+  {
+    "offer_id": "OFF_002",
+    "name": "CDB 120% CDI",
+    "canal": "internet_banking",
+    "base_rate": 0.07,
+    "boosts": {
+      "job_management": 0.1,
+      "job_retired": 0.06,
+      "edu_university": 0.08,
+      "age_senior": 0.05,
+      "no_default": 0.04
     },
-    {
-      "arm_id": "ARM_SMS_SOFT",
-      "name": "SMS — CTA suave",
-      "canal": "sms",
-      "cta": "soft",
-      "mult": 1.1,
-      "custo_rel": 0.5
+    "reward_val": 2.0
+  },
+  {
+    "offer_id": "OFF_003",
+    "name": "Seguro de vida",
+    "canal": "app_mobile",
+    "base_rate": 0.06,
+    "boosts": {
+      "job_retired": 0.12,
+      "age_senior": 0.08,
+      "marital_married": 0.04,
+      "has_housing": 0.03
     },
-    {
-      "arm_id": "ARM_SMS_URGENTE",
-      "name": "SMS — CTA urgente",
-      "canal": "sms",
-      "cta": "urgente",
-      "mult": 1.3,
-      "custo_rel": 0.5
+    "reward_val": 2.5
+  },
+  {
+    "offer_id": "OFF_004",
+    "name": "Empréstimo pessoal pré-aprovado",
+    "canal": "sms",
+    "base_rate": 0.13,
+    "boosts": {
+      "job_blue-collar": 0.08,
+      "job_services": 0.06,
+      "job_housemaid": 0.05,
+      "edu_basic": 0.04,
+      "has_loan": -0.05
     },
-    {
-      "arm_id": "ARM_CALL_CONSULTIVO",
-      "name": "Ligação — abordagem consultiva",
-      "canal": "call",
-      "cta": "consultivo",
-      "mult": 1.45,
-      "custo_rel": 1.0
-    }
-  ]
-}
+    "reward_val": 1.2
+  },
+  {
+    "offer_id": "OFF_005",
+    "name": "Previdência privada PGBL",
+    "canal": "internet_banking",
+    "base_rate": 0.05,
+    "boosts": {
+      "job_management": 0.1,
+      "job_self-employed": 0.07,
+      "edu_university": 0.09,
+      "age_senior": 0.06,
+      "no_default": 0.04
+    },
+    "reward_val": 3.0
+  }
+]

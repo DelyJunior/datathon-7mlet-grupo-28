@@ -1,18 +1,13 @@
-# Política de Canais de Contato (SINTÉTICA)
+# Política de Canais e Distribuição de Ofertas
 
-> Documento fictício descrevendo características de cada canal simulado.
+> Diretrizes operacionais para distribuição do catálogo de produtos financeiros via canais digitais e assistidos.
 
-## Canais disponíveis
+## Canais e Custos Operacionais
+As decisões do modelo de Bandit Contextual devem considerar o impacto financeiro do canal atrelado à oferta. Os custos relativos (`custo_rel`) definidos no catálogo servem como penalizadores ou balizadores de margem:
 
-- **Email**: menor custo operacional, menor taxa de resposta imediata.
-  Adequado para CTAs informativos.
-- **SMS**: custo médio, alta taxa de abertura, mas risco de percepção invasiva
-  se usado com frequência.
-- **Call (ligação)**: maior custo operacional, requer disponibilidade humana,
-  mas maior taxa de conversão para produtos de maior complexidade.
+* **App Mobile (`app_mobile`):** Canal de custo marginal zero. Indicado para volumetria alta e ofertas massificadas (ex: Cartão de Crédito).
+* **Internet Banking (`internet_banking`):** Canal digital focado em ambiente logado desktop. Custo operacional nulo, com alta propensão a produtos de investimento.
+* **Call Center (`call`):** Canal humano de altíssimo custo operacional. Deve ser priorizado estritamente onde o ganho esperado (`reward_val` * probabilidade) compense o acionamento da PA (Posição de Atendimento).
 
-## Restrição de custo
-
-O custo relativo de cada braço está documentado em offer_catalog.json no campo
-`custo_rel`. Políticas de orçamento podem limitar o uso do braço CALL a um
-percentual máximo do volume total de contatos.
+## Restrição de Orçamento e Volumetria
+O braço ou combinação com canal `call` possui restrição de capacidade diária. Modelos de exploração (como Thompson Sampling) não devem alocar mais do que 20% do tráfego total do dia para interações telefônicas humanas em segmentos de baixa conversão.

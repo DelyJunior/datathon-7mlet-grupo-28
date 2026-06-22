@@ -1,20 +1,15 @@
-# Política de Suitability — Term Deposit (SINTÉTICA)
+# Política Corpotativa de Suitability e Proteção ao Cliente
 
-> Documento fictício criado para fins de demonstração técnica do datathon.
-> Não reflete política comercial real de nenhuma instituição.
+> Regras rígidas de elegibilidade e conformidade regulatória para oferta de produtos. Devem ser aplicadas como filtros pós-bandit (hard constraints).
 
-## Regras de adequação (suitability)
+## Regras de Adequação por Perfil de Risco
 
-1. Clientes com `default=yes` (crédito em situação de inadimplência) não devem
-   receber abordagem via CALL consultivo — risco de mensagem inadequada sobre
-   produto de investimento para perfil de risco elevado.
+1.  **Proteção contra Superendividamento (Default Check):**
+    * Clientes com restrição activa de crédito (`default == 'yes'`) estão **terminantemente proibidos** de receber ofertas de Crédito ou Cartões (`OFF_001`). 
+    * *Fallback:* Em caso de seleção, reverter para conteúdo puramente informativo ou Seguro de Vida Básico (`OFF_003`).
 
-2. Clientes classificados como `age_senior` (>= 55 anos) E com `housing=no`
-   E `loan=no` têm prioridade para abordagem CALL consultiva — perfil compatível
-   com produto de longo prazo e maior disponibilidade para atendimento humano.
+2.  **Direcionamento de Investimentos Complexos (CDB 120%):**
+    * A oferta `OFF_002` (CDB 120% CDI) exige um perfil de estabilidade financeira. Não deve ser ofertada para clientes no segmento `student` (estudantes) ou desempregados (`unemployed`), exceto se possuírem balanço em conta classificado como `high`.
 
-3. O braço SMS_URGENTE não deve ser usado mais de 2 vezes para o mesmo cliente
-   em um intervalo de 30 dias — risco de percepção de pressão excessiva.
-
-4. Clientes em segmento `student__young` não devem receber abordagem CALL —
-   canal desproporcional ao perfil e ticket esperado do produto.
+3.  **Priorização de Canais por Faixa Etária:**
+    * Clientes na faixa `age_senior` (>= 55 anos) que possuam baixa familiaridade com canais digitais (`housing == 'no'` ou interações baixas no app) devem ter o canal `call` priorizado para produtos complexos como Seguros (`OFF_003`), respeitando os limites da política de canais.

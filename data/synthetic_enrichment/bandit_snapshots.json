@@ -1,0 +1,123 @@
+[
+  {
+    "round": 0,
+    "regret_acumulado": 0.16,
+    "estimativas": {
+      "OFF_001": 0.5,
+      "OFF_002": 0.5,
+      "OFF_003": 0.5,
+      "OFF_004": 0.5,
+      "OFF_005": 0.3333
+    }
+  },
+  {
+    "round": 500,
+    "regret_acumulado": 36.29,
+    "estimativas": {
+      "OFF_001": 0.1439,
+      "OFF_002": 0.1111,
+      "OFF_003": 0.0845,
+      "OFF_004": 0.0972,
+      "OFF_005": 0.1087
+    }
+  },
+  {
+    "round": 1000,
+    "regret_acumulado": 64.9,
+    "estimativas": {
+      "OFF_001": 0.1533,
+      "OFF_002": 0.0984,
+      "OFF_003": 0.1161,
+      "OFF_004": 0.109,
+      "OFF_005": 0.0946
+    }
+  },
+  {
+    "round": 1500,
+    "regret_acumulado": 91.94,
+    "estimativas": {
+      "OFF_001": 0.1663,
+      "OFF_002": 0.0964,
+      "OFF_003": 0.117,
+      "OFF_004": 0.1282,
+      "OFF_005": 0.1224
+    }
+  },
+  {
+    "round": 2000,
+    "regret_acumulado": 118.66,
+    "estimativas": {
+      "OFF_001": 0.1586,
+      "OFF_002": 0.0955,
+      "OFF_003": 0.1129,
+      "OFF_004": 0.1333,
+      "OFF_005": 0.1351
+    }
+  },
+  {
+    "round": 2500,
+    "regret_acumulado": 146.09,
+    "estimativas": {
+      "OFF_001": 0.1574,
+      "OFF_002": 0.0955,
+      "OFF_003": 0.1182,
+      "OFF_004": 0.1236,
+      "OFF_005": 0.1356
+    }
+  },
+  {
+    "round": 3000,
+    "regret_acumulado": 174.25,
+    "estimativas": {
+      "OFF_001": 0.155,
+      "OFF_002": 0.0941,
+      "OFF_003": 0.1121,
+      "OFF_004": 0.1221,
+      "OFF_005": 0.1318
+    }
+  },
+  {
+    "round": 3500,
+    "regret_acumulado": 199.33,
+    "estimativas": {
+      "OFF_001": 0.1562,
+      "OFF_002": 0.0936,
+      "OFF_003": 0.1121,
+      "OFF_004": 0.1221,
+      "OFF_005": 0.1216
+    }
+  },
+  {
+    "round": 4000,
+    "regret_acumulado": 223.31,
+    "estimativas": {
+      "OFF_001": 0.1542,
+      "OFF_002": 0.0927,
+      "OFF_003": 0.1074,
+      "OFF_004": 0.1163,
+      "OFF_005": 0.1211
+    }
+  },
+  {
+    "round": 4500,
+    "regret_acumulado": 249.09,
+    "estimativas": {
+      "OFF_001": 0.1521,
+      "OFF_002": 0.0922,
+      "OFF_003": 0.1081,
+      "OFF_004": 0.1201,
+      "OFF_005": 0.1144
+    }
+  },
+  {
+    "round": 4999,
+    "regret_acumulado": 273.87,
+    "estimativas": {
+      "OFF_001": 0.1493,
+      "OFF_002": 0.0918,
+      "OFF_003": 0.1127,
+      "OFF_004": 0.1202,
+      "OFF_005": 0.1108
+    }
+  }
+]
