@@ -1,0 +1,6 @@
+age,job,marital,education,default,housing,oferta_recomendada
+30,management,married,basic.4y,yes,no,OFF_003
+20,student,single,unknown,unknown,unknown,OFF_001
+22,student,unknown,unknown,no,no,OFF_001
+65,retired,unknown,unknown,no,yes,OFF_003
+45,management,married,university.degree,no,yes,OFF_005

@@ -8,9 +8,11 @@
       "job_admin.": 0.06,
       "job_management": 0.04,
       "job_student": 0.05,
+      "job_technician": 0.05,
       "edu_university": 0.04,
-      "marital_single": 0.03,
-      "no_loan": 0.03
+      "marital_single": 0.07,
+      "no_loan": 0.03,
+      "yes_default": -1.0
     },
     "reward_val": 1.0
   },
@@ -49,9 +51,10 @@
     "boosts": {
       "job_blue-collar": 0.08,
       "job_services": 0.06,
-      "job_housemaid": 0.05,
+      "job_housemaid": 0.07,
       "edu_basic": 0.04,
-      "has_loan": -0.05
+      "has_loan": -0.05,
+      "yes_default": -1.0
     },
     "reward_val": 1.2
   },
@@ -62,8 +65,8 @@
     "base_rate": 0.05,
     "boosts": {
       "job_management": 0.1,
-      "job_self-employed": 0.07,
-      "edu_university": 0.09,
+      "job_self-employed": 0.1,
+      "edu_university": 0.1,
       "age_senior": 0.06,
       "no_default": 0.04
     },
