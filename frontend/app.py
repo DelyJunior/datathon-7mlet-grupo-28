@@ -39,8 +39,10 @@ st.markdown("""
         border-radius: 12px;
         padding: 1.4rem 1.6rem;
         margin-bottom: 1rem;
+        color: #1e293b !important;
     }
-    .card h3 { margin: 0 0 .5rem 0; font-size: 1rem; color: #1e293b; }
+    .card h3 { margin: 0 0 .5rem 0; font-size: 1rem; color: #1e293b !important; }
+    .card td, .card th { color: #1e293b !important; }
 
     .badge {
         display: inline-block;
@@ -131,13 +133,13 @@ with tab_health:
                     <h3>{icone} API <span class="{cor}">{status.upper()}</span></h3>
                     <table style="width:100%;font-size:.88rem;border-collapse:collapse">
                         <tr><td style="padding:.3rem .5rem;color:#64748b">Versão da política</td>
-                            <td style="padding:.3rem .5rem;font-weight:600">{data.get('policy_version','—')}</td></tr>
+                            <td style="padding:.3rem .5rem;font-weight:600;color:#1e293b">{data.get('policy_version','—')}</td></tr>
                         <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Treinado em</td>
-                            <td style="padding:.3rem .5rem">{data.get('trained_at','—')}</td></tr>
+                            <td style="padding:.3rem .5rem;color:#1e293b">{data.get('trained_at','—')}</td></tr>
                         <tr><td style="padding:.3rem .5rem;color:#64748b">Segmentos aprendidos</td>
-                            <td style="padding:.3rem .5rem;font-weight:600">{data.get('n_segments_learned','—')}</td></tr>
+                            <td style="padding:.3rem .5rem;font-weight:600;color:#1e293b">{data.get('n_segments_learned','—')}</td></tr>
                         <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Total de ofertas</td>
-                            <td style="padding:.3rem .5rem">{data.get('total_offers','—')}</td></tr>
+                            <td style="padding:.3rem .5rem;color:#1e293b">{data.get('total_offers','—')}</td></tr>
                     </table>
                 </div>
                 """, unsafe_allow_html=True)
@@ -242,17 +244,17 @@ with tab_decide:
                     </h3>
                     <table style="width:100%;font-size:.88rem;border-collapse:collapse">
                         <tr><td style="padding:.3rem .5rem;color:#64748b">Canal</td>
-                            <td style="padding:.3rem .5rem;font-weight:600">{data.get('canal')}</td></tr>
+                            <td style="padding:.3rem .5rem;font-weight:600;color:#1e293b">{data.get('canal')}</td></tr>
                         <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Segmento</td>
-                            <td style="padding:.3rem .5rem">{data.get('segment')}</td></tr>
+                            <td style="padding:.3rem .5rem;color:#1e293b">{data.get('segment')}</td></tr>
                         <tr><td style="padding:.3rem .5rem;color:#64748b">Motivo</td>
                             <td style="padding:.3rem .5rem;font-weight:600;color:{cor}">{rc}</td></tr>
                         <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Prob. de conversão</td>
-                            <td style="padding:.3rem .5rem;font-weight:600">{prob_txt}</td></tr>
+                            <td style="padding:.3rem .5rem;font-weight:600;color:#1e293b">{prob_txt}</td></tr>
                         <tr><td style="padding:.3rem .5rem;color:#64748b">Versão da política</td>
-                            <td style="padding:.3rem .5rem">{data.get('policy_version')}</td></tr>
+                            <td style="padding:.3rem .5rem;color:#1e293b">{data.get('policy_version')}</td></tr>
                         <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Event ID</td>
-                            <td style="padding:.3rem .5rem;font-family:monospace;font-size:.8rem">{data.get('event_id')}</td></tr>
+                            <td style="padding:.3rem .5rem;font-family:monospace;font-size:.8rem;color:#1e293b">{data.get('event_id')}</td></tr>
                     </table>
                 </div>
                 """, unsafe_allow_html=True)
@@ -314,11 +316,11 @@ with tab_reward:
                         <h3>🔄 Modelo atualizado</h3>
                         <table style="width:100%;font-size:.88rem;border-collapse:collapse">
                             <tr><td style="padding:.3rem .5rem;color:#64748b">Event ID</td>
-                                <td style="padding:.3rem .5rem;font-family:monospace;font-size:.8rem">{data.get('event_id')}</td></tr>
+                                <td style="padding:.3rem .5rem;font-family:monospace;font-size:.8rem;color:#1e293b">{data.get('event_id')}</td></tr>
                             <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Oferta</td>
-                                <td style="padding:.3rem .5rem;font-weight:600">{data.get('offer_id')}</td></tr>
+                                <td style="padding:.3rem .5rem;font-weight:600;color:#1e293b">{data.get('offer_id')}</td></tr>
                             <tr><td style="padding:.3rem .5rem;color:#64748b">Feedback</td>
-                                <td style="padding:.3rem .5rem;font-weight:600">{"✅ Conversão" if data.get("reward")==1 else "❌ Sem conversão"}</td></tr>
+                                <td style="padding:.3rem .5rem;font-weight:600;color:#1e293b">{"✅ Conversão" if data.get("reward")==1 else "❌ Sem conversão"}</td></tr>
                             <tr style="background:#f1f5f9"><td style="padding:.3rem .5rem;color:#64748b">Nova estimativa</td>
                                 <td style="padding:.3rem .5rem;font-weight:600;color:#1d4ed8">{round(nova_est*100,2)}%</td></tr>
                         </table>
